@@ -31,6 +31,8 @@ body{font-family:'Inter',sans-serif;line-height:1.5;color:#e8edf3;overflow-x:hid
 @keyframes spin{to{transform:rotate(360deg)}}
 @keyframes spinR{to{transform:rotate(-360deg)}}
 .image-3d-wrap{display:flex;justify-content:center;width:100%;padding:10px 20px 20px;position:relative;z-index:2}
+.img-link{display:flex;justify-content:center;width:100%;cursor:pointer;position:relative;z-index:5;-webkit-tap-highlight-color:transparent}
+.mobile-buttons,.satellite-wa-btn{position:relative;z-index:5}
 .hero-satellite-img{max-width:88%;max-height:52vh;height:auto;object-fit:contain;filter:drop-shadow(0 0 30px rgba(212,175,55,.6));animation:float 3.8s ease-in-out infinite}
 @keyframes float{0%,100%{transform:translateY(0)}50%{transform:translateY(-14px) scale(1.02)}}
 .mobile-buttons{display:flex;flex-direction:column;width:100%;max-width:400px;padding:0 20px;position:relative;z-index:2}
@@ -95,7 +97,7 @@ footer a{color:#cbd5e1;text-decoration:none}
 <div class="mobile-satellite-hero">
 <div class="orbit-ring"></div><div class="orbit-ring orbit-ring2"></div>
 <div class="image-3d-wrap">
-<img src="ready.jpg" alt="Diamond Proteins And Icecream Center" class="hero-satellite-img">
+<a href="https://wa.me/91916287179314?text=Hi%2C%20I%20am%20Interested" target="_blank" rel="noopener" class="img-link" aria-label="Chat on WhatsApp"><img src="ready.jpg" alt="Diamond Proteins And Icecream Center" class="hero-satellite-img"></a>
 </div>
 <div class="mobile-buttons">
 <a href="https://wa.me/91916287179314?text=Hi%2C%20I%20am%20Interested" target="_blank" rel="noopener" class="satellite-wa-btn"><i class="fab fa-whatsapp"></i> ORDER NOW</a>
@@ -116,7 +118,7 @@ footer a{color:#cbd5e1;text-decoration:none}
 <div class="container">
 <h2 class="section-title">About Diamond Proteins And Icecream Center</h2>
 <div class="about-grid">
-<div class="about-img"><img src="ready.jpg" alt="Diamond Proteins And Icecream Center"></div>
+<div class="about-img"><a href="https://wa.me/91916287179314?text=Hi%2C%20I%20am%20Interested" target="_blank" rel="noopener" class="img-link" aria-label="Chat on WhatsApp"><img src="ready.jpg" alt="Diamond Proteins And Icecream Center"></a></div>
 <div>
 <p>Diamond Proteins And Icecream Center is your trusted destination for premium quality proteins and delicious ice creams. We offer a wide range of nutritional supplements and frozen treats for health-conscious individuals and dessert lovers alike.</p>
 <p style="margin-top:16px">Our team is dedicated to providing authentic, high-quality products sourced from trusted brands. Whether you want protein powders, supplements, or a refreshing ice cream — we have everything you need.</p>
