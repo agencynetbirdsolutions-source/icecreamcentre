@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title>Diamond Proteins And Icecream Center</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+:root{--green:#00f5a0;--cyan:#00d4ff}
+body{font-family:'Inter',sans-serif;line-height:1.5;color:#e8edf3;overflow-x:hidden;background:#060e1a}
+.container{width:100%;max-width:1280px;margin:0 auto;padding:0 24px}
+.satellite-header{background:rgba(6,14,26,.95);backdrop-filter:blur(12px);border-bottom:2px solid var(--green);padding:14px 0;position:sticky;top:0;z-index:1000}
+.header-flex{display:flex;justify-content:space-between;align-items:center}
+.brand-logo{display:flex;align-items:center;gap:12px}
+.brand-logo i{font-size:2.2rem;color:var(--green);filter:drop-shadow(0 0 8px #00f5a0)}
+.brand-text h1{font-size:1.2rem;font-family:'Space Grotesk',sans-serif;background:linear-gradient(135deg,#fff,var(--green));-webkit-background-clip:text;background-clip:text;color:transparent}
+.brand-text p{font-size:.7rem;color:#7a9bb5;letter-spacing:.5px}
+.nav-links ul{display:flex;gap:32px;list-style:none}
+.nav-links a{text-decoration:none;font-weight:500;color:#cbd5e1;transition:.2s;font-size:.9rem}
+.nav-links a:hover{color:var(--green)}
+
+/* MOBILE HERO - ROYAL GOLD */
+.mobile-satellite-hero{display:none;position:relative;width:100%;min-height:100vh;background:radial-gradient(circle at 30% 20%,#2a1a0a,#0a0502);overflow:hidden;justify-content:center;align-items:center;flex-direction:column;padding:20px 0}
+.mobile-satellite-hero::before{content:'';position:absolute;inset:0;background:radial-gradient(circle at 20% 30%,rgba(212,175,55,.25),transparent 50%),radial-gradient(circle at 80% 70%,rgba(249,217,118,.2),transparent 45%);pointer-events:none}
+.mobile-satellite-hero::after{content:'';position:absolute;inset:0;background-image:radial-gradient(circle,rgba(212,175,55,.25) 1px,transparent 1px);background-size:50px 50px;animation:drift 32s linear infinite;pointer-events:none}
+@keyframes drift{to{transform:translate(50px,50px)}}
+.orbit-ring{position:absolute;width:300px;height:300px;border:1px solid rgba(212,175,55,.25);border-radius:50%;top:-80px;right:-100px;animation:spin 24s linear infinite;pointer-events:none}
+.orbit-ring2{width:400px;height:400px;top:auto;bottom:-100px;left:-120px;right:auto;animation:spinR 28s linear infinite}
+@keyframes spin{to{transform:rotate(360deg)}}
+@keyframes spinR{to{transform:rotate(-360deg)}}
+.image-3d-wrap{display:flex;justify-content:center;width:100%;padding:10px 20px 20px;position:relative;z-index:2}
+.hero-satellite-img{max-width:88%;max-height:52vh;height:auto;object-fit:contain;filter:drop-shadow(0 0 30px rgba(212,175,55,.6));animation:float 3.8s ease-in-out infinite}
+@keyframes float{0%,100%{transform:translateY(0)}50%{transform:translateY(-14px) scale(1.02)}}
+.mobile-buttons{display:flex;flex-direction:column;width:100%;max-width:400px;padding:0 20px;position:relative;z-index:2}
+.satellite-wa-btn{display:inline-flex;align-items:center;justify-content:center;gap:12px;background:linear-gradient(105deg,#d4af37,#f9d976,#d4af37);background-size:200% 200%;color:#1a0f0a;padding:16px 40px;border-radius:60px;font-weight:800;font-size:1.2rem;font-family:'Space Grotesk',sans-serif;text-decoration:none;box-shadow:0 0 35px rgba(212,175,55,.8);animation:pulse 1.8s infinite alternate,shift 3s infinite;-webkit-tap-highlight-color:transparent;width:100%}
+.satellite-wa-btn:active{transform:scale(.95)}
+.satellite-wa-btn i{font-size:1.6rem}
+@keyframes pulse{0%{transform:scale(1)}100%{transform:scale(1.05)}}
+@keyframes shift{0%,100%{background-position:0 50%}50%{background-position:100% 50%}}
+.scroll-satellite{position:absolute;bottom:18px;left:50%;transform:translateX(-50%);font-size:.7rem;display:flex;flex-direction:column;align-items:center;gap:4px;color:#f9d976;letter-spacing:1.5px;animation:scrollA 2s infinite;z-index:2}
+@keyframes scrollA{0%,100%{opacity:.5;transform:translateX(-50%) translateY(0)}50%{opacity:1;transform:translateX(-50%) translateY(-6px)}}
+
+/* DESKTOP */
+.hero-desktop{background:linear-gradient(125deg,#060e1a,#0a2a4a);padding:110px 0 90px;text-align:center}
+.hero-desktop h2{font-size:2.8rem;font-family:'Space Grotesk',sans-serif;background:linear-gradient(135deg,#fff,#00f5a0,#00d4ff);-webkit-background-clip:text;background-clip:text;color:transparent}
+.btn-primary{background:linear-gradient(95deg,#00f5a0,#00d4ff);color:#060e1a;padding:12px 32px;border-radius:40px;font-weight:700;text-decoration:none;display:inline-block;transition:.2s}
+.btn-primary:hover{transform:scale(1.05)}
+.section-pad{padding:70px 0}
+.section-title{text-align:center;font-size:2rem;font-family:'Space Grotesk',sans-serif;background:linear-gradient(135deg,#00f5a0,#00d4ff);-webkit-background-clip:text;background-clip:text;color:transparent;margin-bottom:45px}
+.about-grid{display:flex;gap:50px;align-items:center}
+.about-img{flex:1;border-radius:20px;overflow:hidden;border:1px solid rgba(0,245,160,.2)}
+.about-img img{width:100%;display:block}
+.about-grid>div:last-child{flex:1}
+.services-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:30px}
+.service-card,.spec-card{background:#0a1628;border-radius:20px;padding:28px 20px;text-align:center;transition:.2s;border:1px solid rgba(0,245,160,.15)}
+.service-card:hover{transform:translateY(-5px);border-color:#00f5a0}
+.service-card i{font-size:2.5rem;color:#00f5a0;margin-bottom:12px}
+.btn-outline-sat{background:transparent;border:1px solid #00f5a0;color:#00f5a0;padding:8px 18px;border-radius:30px;text-decoration:none;font-weight:500;transition:.2s;display:inline-block;margin-top:12px}
+.btn-outline-sat:hover{background:#00f5a0;color:#060e1a}
+.grid4{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:25px}
+.spec-card i,.why i{font-size:2rem;color:#00f5a0}
+.why{text-align:center}
+.why h3,.spec-card h3{margin:10px 0}
+footer{background:#040b14;color:#cbd5e1;padding:50px 0 25px;border-top:1px solid rgba(0,245,160,.1)}
+.footer-inner{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:40px}
+footer h3,footer h4{color:#00f5a0}
+footer a{color:#cbd5e1;text-decoration:none}
+.desktop-wa{position:fixed;bottom:28px;right:28px;background:linear-gradient(95deg,#d4af37,#f9d976);padding:10px 22px;border-radius:40px;display:flex;gap:10px;text-decoration:none;color:#1a0f0a;font-weight:700;z-index:99;box-shadow:0 0 15px rgba(212,175,55,.3);transition:.2s;align-items:center}
+.desktop-wa:hover{transform:scale(1.05)}
+@media(max-width:780px){
+.satellite-header,.hero-desktop,.desktop-wa{display:none}
+.mobile-satellite-hero{display:flex}
+.about-grid{flex-direction:column}
+.section-pad{padding:50px 0}
+.section-title{font-size:1.8rem;margin-bottom:35px}
+}
+@media(max-width:550px){.orbit-ring{display:none}}
+</style>
+</head>
+<body>
+
+<div class="satellite-header">
+<div class="container header-flex">
+<div class="brand-logo"><i class="fas fa-ice-cream"></i>
+<div class="brand-text"><h1>DIAMOND PROTEINS AND ICECREAM CENTER</h1><p>PROTEINS & ICECREAM SPECIALIST</p></div></div>
+<nav class="nav-links"><ul>
+<li><a href="#home">Home</a></li><li><a href="#about">About</a></li><li><a href="#services">Products</a></li><li><a href="#capabilities">Specialities</a></li><li><a href="#contact">Contact</a></li>
+</ul></nav>
+</div>
+</div>
+
+<!-- MOBILE HERO -->
+<div class="mobile-satellite-hero">
+<div class="orbit-ring"></div><div class="orbit-ring orbit-ring2"></div>
+<div class="image-3d-wrap">
+<img src="ready.jpg" alt="Diamond Proteins And Icecream Center" class="hero-satellite-img">
+</div>
+<div class="mobile-buttons">
+<a href="https://wa.me/91916287179314?text=Hi%2C%20I%20am%20Interested" target="_blank" rel="noopener" class="satellite-wa-btn"><i class="fab fa-whatsapp"></i> ORDER NOW</a>
+</div>
+<div class="scroll-satellite"><i class="fas fa-arrow-down"></i><span>SCROLL DOWN</span></div>
+</div>
+
+<!-- DESKTOP HERO -->
+<div class="hero-desktop" id="home">
+<div class="container">
+<h2>DIAMOND PROTEINS AND ICECREAM CENTER</h2>
+<p style="font-size:1.1rem;max-width:700px;margin:20px auto">Premium proteins and delicious ice creams — your one-stop destination for healthy nutrition and sweet treats.</p>
+<a href="#services" class="btn-primary">Explore Products →</a>
+</div>
+</div>
+
+<section class="section-pad" id="about">
+<div class="container">
+<h2 class="section-title">About Diamond Proteins And Icecream Center</h2>
+<div class="about-grid">
+<div class="about-img"><img src="ready.jpg" alt="Diamond Proteins And Icecream Center"></div>
+<div>
+<p>Diamond Proteins And Icecream Center is your trusted destination for premium quality proteins and delicious ice creams. We offer a wide range of nutritional supplements and frozen treats for health-conscious individuals and dessert lovers alike.</p>
+<p style="margin-top:16px">Our team is dedicated to providing authentic, high-quality products sourced from trusted brands. Whether you want protein powders, supplements, or a refreshing ice cream — we have everything you need.</p>
+<p style="margin-top:16px">From fitness enthusiasts to families, we serve everyone with the best products at affordable prices.</p>
+</div>
+</div>
+</div>
+</section>
+
+<section class="section-pad" style="background:#071020" id="services">
+<div class="container">
+<h2 class="section-title">Our Products</h2>
+<div class="services-grid">
+<div class="service-card"><i class="fas fa-dumbbell"></i><h3>Protein Supplements</h3><p>Premium whey protein, mass gainers, and nutritional supplements for fitness enthusiasts.</p><a href="https://wa.me/91916287179314?text=Hi%2C%20I%20am%20Interested" target="_blank" rel="noopener" class="btn-outline-sat">Order Now</a></div>
+<div class="service-card"><i class="fas fa-ice-cream"></i><h3>Ice Creams</h3><p>Delicious range of ice creams in multiple flavors — from classic vanilla to exotic treats.</p><a href="https://wa.me/91916287179314?text=Hi%2C%20I%20am%20Interested" target="_blank" rel="noopener" class="btn-outline-sat">Order Now</a></div>
+<div class="service-card"><i class="fas fa-heartbeat"></i><h3>Health Supplements</h3><p>Vitamins, minerals, and health supplements for overall wellness and immunity.</p><a href="https://wa.me/91916287179314?text=Hi%2C%20I%20am%20Interested" target="_blank" rel="noopener" class="btn-outline-sat">Order Now</a></div>
+<div class="service-card"><i class="fas fa-truck"></i><h3>Home Delivery</h3><p>Fast and reliable home delivery for all your protein and ice cream needs.</p><a href="https://wa.me/91916287179314?text=Hi%2C%20I%20am%20Interested" target="_blank" rel="noopener" class="btn-outline-sat">Order Now</a></div>
+</div>
+</div>
+</section>
+
+<section class="section-pad" id="capabilities">
+<div class="container">
+<h2 class="section-title">Our Specialities</h2>
+<div class="grid4">
+<div class="spec-card"><i class="fas fa-dumbbell"></i><h3>Whey Protein</h3></div>
+<div class="spec-card"><i class="fas fa-ice-cream"></i><h3>Ice Creams</h3></div>
+<div class="spec-card"><i class="fas fa-capsules"></i><h3>Supplements</h3></div>
+<div class="spec-card"><i class="fas fa-apple-alt"></i><h3>Healthy Snacks</h3></div>
+</div>
+</div>
+</section>
+
+<section class="section-pad" style="background:#071020">
+<div class="container">
+<h2 class="section-title">Why Choose Us</h2>
+<div class="grid4">
+<div class="why"><i class="fas fa-award"></i><h3>Premium Quality</h3><p>Authentic branded products</p></div>
+<div class="why"><i class="fas fa-heart"></i><h3>Healthy Choice</h3><p>Nutrition for fitness</p></div>
+<div class="why"><i class="fas fa-star"></i><h3>Trusted Brand</h3><p>Loved by customers</p></div>
+<div class="why"><i class="fas fa-rupee-sign"></i><h3>Affordable</h3><p>Best price guaranteed</p></div>
+</div>
+</div>
+</section>
+
+<footer id="contact">
+<div class="container">
+<div class="footer-inner">
+<div><h3>DIAMOND PROTEINS AND ICECREAM CENTER</h3><p>Premium proteins and delicious ice creams — your one-stop destination for healthy nutrition and sweet treats.</p></div>
+<div><h4>Quick Links</h4><ul style="list-style:none;margin-top:12px"><li><a href="#home">Home</a></li><li><a href="#services">Products</a></li><li><a href="#capabilities">Specialities</a></li></ul></div>
+<div><h4>Contact Info</h4><p><i class="fab fa-whatsapp"></i> <a href="https://wa.me/91916287179314?text=Hi%2C%20I%20am%20Interested" target="_blank" rel="noopener">Chat on WhatsApp</a></p></div>
+</div>
+<div style="text-align:center;border-top:1px solid #1a2a4a;margin-top:40px;padding-top:30px"><p>© 2026 Diamond Proteins And Icecream Center</p></div>
+</div>
+</footer>
+
+<a href="https://wa.me/91916287179314?text=Hi%2C%20I%20am%20Interested" target="_blank" rel="noopener" class="desktop-wa"><i class="fab fa-whatsapp"></i> Order Now</a>
+
+<script>
+document.querySelectorAll('a[href^="#"]').forEach(a=>{a.addEventListener('click',e=>{
+const t=document.querySelector(a.getAttribute('href'));
+if(t){e.preventDefault();window.scrollTo({top:t.offsetTop-80,behavior:'smooth'})}})});
+</script>
+</body>
+</html>
